@@ -216,7 +216,8 @@ def kt_compiler_plugin_impl(ctx):
     return [
         merged_deps,
         _KtCompilerPluginInfo(
-            classpath = merged_deps.transitive_runtime_jars.to_list(),
+#            classpath = merged_deps.transitive_runtime_jars.to_list(),
+            classpath = merged_deps.transitive_compile_time_jars.to_list(),
             options = options,
         ),
     ]

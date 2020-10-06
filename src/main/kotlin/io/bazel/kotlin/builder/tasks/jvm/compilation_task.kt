@@ -56,11 +56,8 @@ fun JvmCompilationTask.baseArgs(): CompilationArgs = CompilationArgs()
 
 internal fun pluginArgs(context: JvmCompilationTask, args: CompilationArgs): CompilationArgs = args
     .let {
-        var r = it
-        val pluginsPath = context.inputs.pluginpathsList.forEach { pluginPath ->
-            r = r.value("-Xplugin=${pluginPath}")
-        }
-        r
+        val pluginsPath = context.inputs.pluginpathsList.joinToString(":")
+        it.value("-Xplugin=${pluginsPath}")
     }
     .let {
         var r = it

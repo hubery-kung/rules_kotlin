@@ -229,3 +229,7 @@ This project is licensed under the [Apache 2.0 license](LICENSE), as are all con
 
 See the [CONTRIBUTING](CONTRIBUTING.md) doc for information about how to contribute to
 this project.
+
+## Feedback
+
+For feedback and inquiries, please contact us at devia@realchar.ai.
